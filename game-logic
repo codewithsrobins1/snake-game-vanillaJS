@@ -1,0 +1,37 @@
+1) Setup the gameboard
+    -use css display grid (25 x 25 Grid)
+    -style the game pieces with css
+
+    -Snake will start at middle of board
+    -Food will always be in a random location on the board
+
+
+2) Define logic of gameboard
+        -Constantly render browser frame 
+        -Needs to constantly be updated and reflect changes based on actions
+        -Needs to draw what's happening
+            -Use gridRowStart and gridColumnStart to place snake and food on the grid
+        -Chcek if game is over 
+
+
+3) Define logic of snake and how it moves
+    -Snake spawns in hard-coded area
+    -Grows in size as it touches food
+    -define the head of the snake
+
+    -Movement
+        -Use arrow keys to move
+        -If snake is moving in one direction, prevent the opposite direction
+
+
+4) Define logic of food and how it spawns
+    -food spawns at a random location in the 25x25 grid
+    -Will move to a new location once snake touches it
+    -It can never spawn on the snakes current location
+        -In the randomFoodLocation function, spawn food somewhere else if it lands on snake
+
+5) Define how the game is over 
+    -If the snake hits itself
+    -If snake hits the edges on gameboard
+
+    -Need to use the snake's head which is the first index of the body
